@@ -3,33 +3,34 @@
 <head>
   <meta charset='utf-8'>
 
-  <title>stefanbirkner/flea @ GitHub</title>
+  <title>Flea</title>
 
   <style type="text/css">
     body {
       background-color: #5dc1e8;
-      font-family: Helvetica, Arial, FreeSans, san-serif;
       color: #000000;
+      font-family: Helvetica, Arial, FreeSans, san-serif;
 			margin:0;
 			padding:0;
     }
 
 		#info {
       background-color:#5d7be8;
+			float:left;
 			margin-left:5em;			
 			padding:1em;
-			width:400px;
+			width:25em;
 		}
 
 		#instructions {
+			margin-left:34em;
 			padding:1em;
-			width:400px;
 		}
 
     h1 { color: #eaf2d9; font-size: 3.8em; }
-    h2 { font-size: 1.5em; }
+    h2 { font-size: 1.5em; text-shadow: 0 1px 1px #E6EBE0}
     a { color: #eaf2d9; font-weight:bold; }
-    .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
+    .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic; }
     .stitch-effect {
       color: #eaf2d9;
       padding: 12px 17px;
@@ -50,6 +51,7 @@ border-radius:5px;
 -moz-box-shadow: 0 0 0 4px #262626, 2px 1px 4px 4px rgba(10,10,0,.5);
 -webkit-box-shadow: 0 0 0 4px #262626, 2px 1px 4px 4px rgba(10,10,0,.5);
 box-shadow: 0 0 0 4px #262626, 2px 1px 6px 4px rgba(10,10,0,.5);
+			width:25em;
 }
   </style>
 </head>
@@ -81,22 +83,22 @@ box-shadow: 0 0 0 4px #262626, 2px 1px 6px 4px rgba(10,10,0,.5);
 		<h2>Configure flea</h2>
 		<dl class="stitch-effect">
 			flea.js has a few configuration variables:
-			<dt>port<dt><dd>the web server's port</dd>
-			<dt>documentRoot<dt><dd>the directory from which flea will serve files</dd>
-			<dt>directoryIndex<dt><dd>the resource to look for, when the client requests an index of the directory by specifying a / at the end of the directory name.</dd>
-			<dt>contentTypes<dt><dd>content types for specific filename suffixes</dd>
-			
+			<dt><code>port</code><dt><dd>the web server's port</dd>
+			<dt><code>documentRoot</code><dt><dd>the directory from which flea will serve files</dd>
+			<dt><code>directoryIndex</code><dt><dd>the resource to look for, when the client requests an index of the directory by specifying a / at the end of the directory name</dd>
+			<dt><code>contentTypes</code><dt><dd>content types for specific filename suffixes</dd>
 		</dl>
 	</section>
 
-  <script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-try {
-var pageTracker = _gat._getTracker("UA-24640829-3");
-pageTracker._trackPageview();
-} catch(err) {}</script>
+	<script type="text/javascript">
+		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+		document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+	<script type="text/javascript">
+		try {
+			var pageTracker = _gat._getTracker("UA-24640829-3");
+			pageTracker._trackPageview();
+		} catch(err) {}
+	</script>
 </body>
 </html>
