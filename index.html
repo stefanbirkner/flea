@@ -7,76 +7,87 @@
 
   <style type="text/css">
     body {
-      margin-top: 1.0em;
-      background-color: #089736;
+      background-color: #5dc1e8;
       font-family: Helvetica, Arial, FreeSans, san-serif;
-      color: #ffffff;
+      color: #000000;
+			margin:0;
+			padding:0;
     }
-    #container {
-      margin: 0 auto;
-      width: 700px;
-    }
-    h1 { font-size: 3.8em; color: #f768c9; margin-bottom: 3px; }
-    h1 .small { font-size: 0.4em; }
-    h1 a { text-decoration: none }
-    h2 { font-size: 1.5em; color: #f768c9; }
-    h3 { text-align: center; color: #f768c9; }
-    a { color: #f768c9; }
+
+		#info {
+      background-color:#5d7be8;
+			margin-left:5em;			
+			padding:1em;
+			width:400px;
+		}
+
+		#instructions {
+			padding:1em;
+			width:400px;
+		}
+
+    h1 { color: #eaf2d9; font-size: 3.8em; }
+    h2 { font-size: 1.5em; }
+    a { color: #eaf2d9; font-weight:bold; }
     .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
-    .download { float: right; }
-    pre { background: #000; color: #fff; padding: 15px;}
-    hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
-    .footer { text-align:center; padding-top:30px; font-style: italic; }
+    .stitch-effect {
+      color: #eaf2d9;
+      padding: 12px 17px;
+      margin: 10px;
+      background: #262626;
+border: 2px dashed #fff;
+
+/* rounded borders of 5px in firefox */
+-moz-border-radius:5px;   
+
+/* rounded borders of 5px in chrome and other browsers */
+-webkit-border-radius:5px;  
+
+/* rounded borders of 5px in browsers that support css3 */
+border-radius:5px; 
+
+/* shadows for different browsers */
+-moz-box-shadow: 0 0 0 4px #262626, 2px 1px 4px 4px rgba(10,10,0,.5);
+-webkit-box-shadow: 0 0 0 4px #262626, 2px 1px 4px 4px rgba(10,10,0,.5);
+box-shadow: 0 0 0 4px #262626, 2px 1px 6px 4px rgba(10,10,0,.5);
+}
   </style>
 </head>
 
 <body>
-  <a href="http://github.com/stefanbirkner/flea"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
+	<a href="http://github.com/stefanbirkner/flea"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
 
-  <div id="container">
+	<section id="info">
+		<h1>Flea</h1>
+		<p class="description">A minimalistic server for testing web sites with static content.</p>
+    <p>Flea is designed to be a very small <a href="http://nodejs.org">Node.js</a> script. You must install Node.js for running flea.</p>
 
-    <div class="download">
+    <div>
       <a href="http://github.com/stefanbirkner/flea/zipball/master">
         <img border="0" width="90" src="http://github.com/images/modules/download/zip.png"></a>
       <a href="http://github.com/stefanbirkner/flea/tarball/master">
         <img border="0" width="90" src="http://github.com/images/modules/download/tar.png"></a>
     </div>
 
-    <h1><a href="http://github.com/stefanbirkner/flea">Flea</a>
-      <span class="small">by <a href="http://github.com/stefanbirkner">stefanbirkner</a></span></h1>
+		<p>Flea was developed by <a href="http://stefan-birkner.de">Stefan Birkner</a> and is published under Apache License 2.0.</p>
+	</section>
 
-    <div class="description">
-      A simple node.js web server for static pages.
-    </div>
+	<section id="instructions">
+		<h2>Run flea</h2>
+		<p class="stitch-effect">
+			<code>node flea.js</code>
+		</p>
 
-    <p>A tiny server for testing web sites with static content.</p><h2>Dependencies</h2>
-<p>You need Node.js to start the server.</p>
-<h2>Install</h2>
-<p>Run node flea.js</p>
-<h2>License</h2>
-<p>Apache License, Version 2.0</p>
-<h2>Authors</h2>
-<p>Stefan Birkner (mail@stefan-birkner.de)<br/><br/>      </p>
-<h2>Contact</h2>
-<p>Stefan Birkner (github@stefan-birkner.de)<br/>      </p>
-
-
-    <h2>Download</h2>
-    <p>
-      You can download this project in either
-      <a href="http://github.com/stefanbirkner/flea/zipball/master">zip</a> or
-      <a href="http://github.com/stefanbirkner/flea/tarball/master">tar</a> formats.
-    </p>
-    <p>You can also clone the project with <a href="http://git-scm.com">Git</a>
-      by running:
-      <pre>$ git clone git://github.com/stefanbirkner/flea</pre>
-    </p>
-
-    <div class="footer">
-      get the source code on GitHub : <a href="http://github.com/stefanbirkner/flea">stefanbirkner/flea</a>
-    </div>
-
-  </div>
+		<h2>Configure flea</h2>
+		<dl class="stitch-effect">
+			flea.js has a few configuration variables:
+			<dt>port<dt><dd>the web server's port</dd>
+			<dt>documentRoot<dt><dd>the directory from which flea will serve files</dd>
+			<dt>directoryIndex<dt><dd>the resource to look for, when the client requests an index of the directory by specifying a / at the end of the directory name.</dd>
+			<dt>contentTypes<dt><dd>content types for specific filename suffixes</dd>
+			
+		</dl>
+	</section>
 
   <script type="text/javascript">
 var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
